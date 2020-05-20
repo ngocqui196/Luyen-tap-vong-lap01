@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bài 8</title>
 </head>
 <body>
-$END$
+<button id="playgame" onclick="playGame()" >Chơi</button>
+<script>
+    function ramDom() {
+         k = Math.round(Math.random() * 10) ;
+         return k;
+    }
+    function playGame() {
+        let so = prompt("Nhập số từ 1 đến 10.");
+        let i = ramDom();
+        console.log(i);
+        if (i === parseInt(so)) {
+            alert("Chúc mừng bạn đã đoán trúng!")
+        } else if (i < parseInt(so)) {
+            alert("Có lẽ bạn nhập số lớn hơn rồi đấy!")
+        }else {
+            alert("Có lẽ bạn nhập số nhỏ hơn rồi đấy!")
+        }
+    }
+
+
+</script>
 </body>
 </html>
